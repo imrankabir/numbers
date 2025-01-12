@@ -26,9 +26,35 @@ body {
     justify-content: center;
     transition: transform 0.2s, background 0.3s;
 }
-.box:hover {
-    background: #0056b3;
-    transform: scale(1.1);
+.shake {
+    animation: shake 1s;
+}
+@keyframes shake {
+    0% {
+        background: #007bff;
+        transform: scale(1);
+        transform: translateX(0);
+    }
+    25% {
+        background: #0056b3;
+        transform: scale(1.1);
+        transform: translateX(-5px);
+    }
+    50% {
+        background: #0056b3;
+        transform: scale(1.2);
+        transform: translateX(5px);
+    }
+    75% {
+        background: #0056b3;
+        transform: scale(1.1);
+        transform: translateX(-5px);
+    }
+    100% {
+        background: #007bff;
+        transform: scale(1);
+        transform: translateX(0);
+    }
 }
 button {
   color: #fff;
